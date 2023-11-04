@@ -16,13 +16,15 @@ def calculate_bmi(height, weight):
 
     calculate_bmi(weight=57, height=1.73)
 """
-
+import statistics
 
 def main():
     display_main_menu()
     user_input = get_user_input()
     calc_average(user_input)
     find_min_max(user_input)
+    sort_tempereature(user_input)
+    calc_median_temperature(user_input)
 
 def display_main_menu():
     print("Enter some numbers separated by commas e.g. 5, 67, 32")
@@ -57,10 +59,12 @@ def find_min_max(numbers):
 
 
 
-def sort_tempereature():
+def sort_tempereature(numbers):
     print("sort_temperature")
-
-def calc_median_temperature():
+    sorted(numbers)
+def calc_median_temperature(numbers):
     print("calc_median_temperature")
+    median=statistics.median(numbers)
+    print("Median is", median)
 if __name__ == "__main__":
     main()
