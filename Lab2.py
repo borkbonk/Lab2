@@ -42,6 +42,7 @@ def calc_average(numbers):
     if no > 0:
         average = sum(numbers) / no
         print("Average:", average)
+        return average
     else:
         print("No numbers to calculate the average.")
 
@@ -49,13 +50,12 @@ def calc_average(numbers):
 
 
 def find_min_max(numbers):
-    print("find_min_max")
-    minimum=min(numbers)
-    maximum=max(numbers)
-    str(minimum)
-    str(maximum)
-    print("Max is ",maximum)
-    print("Min is ",minimum)
+    minimum = min(numbers)
+    maximum = max(numbers)
+    print("Max is", maximum)
+    print("Min is", minimum)
+    return minimum, maximum
+
 
 
 
@@ -66,5 +66,6 @@ def calc_median_temperature(numbers):
     print("calc_median_temperature")
     median=statistics.median(numbers)
     print("Median is", median)
+    return median
 if __name__ == "__main__":
     main()
